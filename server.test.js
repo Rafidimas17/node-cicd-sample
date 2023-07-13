@@ -30,7 +30,7 @@ it('Call the endpoint /facebook', (done) => {
       .get('/facebook')
       .expect(200)
       .end((err, res) => {
-        expect(res.text).toBe('Hello, Hacebook indonesia!')
+        expect(res.text).toBe('Hello, facebook indonesia!')
         if (err) return done(err);
         done();
       });
