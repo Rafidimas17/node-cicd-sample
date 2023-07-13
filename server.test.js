@@ -25,6 +25,17 @@ it('Call the endpoint /ping', (done) => {
       });
   });
 
+it('Call the endpoint /facebook', (done) => {
+    request
+      .get('/facebook')
+      .expect(200)
+      .end((err, res) => {
+        expect(res.text).toBe('Hello, facebook indonesia!')
+        if (err) return done(err);
+        done();
+      });
+  });
+
   it('Call the endpoint /', (done) => {
     request
       .get('/')
